@@ -1,0 +1,40 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Touch the Animals — Single page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="app" id="app">
+        <div class="animal" id="left" role="button" tabindex="0" aria-label="left animal">
+            <img alt="animal icon" id="leftImg" src="" />
+            <span class="label" id="leftLabel"></span>
+        </div>
+
+        <div class="center">
+            <div class="sentence-wrap">
+                <div class="sentence" id="sentence">...</div>
+            </div>
+            <div id="controls">
+                <button id="newBtn">🔄 New</button>
+                <button id="speakBtn">🔊 Repeat</button>
+                <div id="score"></div>
+            </div>
+        </div>
+
+        <div class="animal" id="right" role="button" tabindex="0" aria-label="right animal">
+            <img alt="animal icon" id="rightImg" src="" />
+            <span class="label" id="rightLabel"></span>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
