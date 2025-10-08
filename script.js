@@ -3,18 +3,18 @@
     // --- DATA ---
 
     const animals = [
-        { name: 'Cat', icon: 'cat' },
-        { name: 'Dog', icon: 'dog' },
-        { name: 'Fish', icon: 'fish' },
-        { name: 'Bird', icon: 'bird' },
-        { name: 'Horse', icon: 'horse' },
-        { name: 'Ladybug', icon: 'ladybug' },
-        { name: 'Pig', icon: 'pig' },
-        { name: 'Rabbit', icon: 'rabbit' },
-        { name: 'Turtle', icon: 'tortoise' },
-        { name: 'Elephant', icon: 'elephant' },
-        { name: 'Owl', icon: 'owl' },
-        { name: 'Snake', icon: 'snake' },
+        { name: 'cat', icon: 'cat' },
+        { name: 'dog', icon: 'dog' },
+        { name: 'fish', icon: 'fish' },
+        { name: 'bird', icon: 'bird' },
+        { name: 'horse', icon: 'horse' },
+        { name: 'ladybug', icon: 'ladybug' },
+        { name: 'pig', icon: 'pig' },
+        { name: 'rabbit', icon: 'rabbit' },
+        { name: 'turtle', icon: 'tortoise' },
+        { name: 'elephant', icon: 'elephant' },
+        { name: 'owl', icon: 'owl' },
+        { name: 'snake', icon: 'snake' },
     ];
 
     const iconUrl = icon => `icons/${icon}.svg`;
