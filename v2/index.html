@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .row {
+            display: flex;
+            flex: 1;
+        }
+
+        .topRow {
+            align-items: center;
+        }
+
+        .topRow div {
+            flex: 1;
+            border: 1px solid #ccc;
+            text-align: center;
+            padding: 20px;
+            align-items: center;
+        }
+
+        .bottomRow {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-top: 1px solid #ccc;
+            flex: 0.5;
+        }
+
+        /* floating settings icon */
+        .settings {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #f1f1f1;
+            border-radius: 50%;
+            padding: 12px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: background 0.2s;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .settings:hover {
+            background: #ddd;
+        }
+
+        .settings svg {
+            width: 24px;
+            height: 24px;
+            fill: #333;
+        }
+
+        /* slide-out settings panel */
+        .settings-pane {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            /* hidden by default */
+            width: 300px;
+            height: 100%;
+            background: #fafafa;
+            box-shadow: -2px 0 8px rgba(0, 0, 0, 0.3);
+            transition: right 0.3s ease;
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        .settings-pane.open {
+            right: 0;
+        }
+
+        .settings-pane h2 {
+            margin-top: 0;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row topRow" id="animals"></div>
+        <div class="row bottomRow">
+            <div>Centered text in second row</div>
+        </div>
+    </div>
+    <!-- Floating settings icon -->
+    <div class="settings" id="settingsBtn">
+        <img src="settings.svg" alt="Settings">
+    </div>
+
+    <!-- Slide-out panel -->
+    <div class="settings-pane" id="settingsPane">
+        <span class="close-btn" id="closePane">&times;</span>
+        <h2>Settings</h2>
+        <p>Example content here — toggle themes, preferences, etc.</p>
+    </div>
+
+    <script>
+        const settingsBtn = document.getElementById('settingsBtn');
+        const settingsPane = document.getElementById('settingsPane');
+        const closePane = document.getElementById('closePane');
+        const animals = document.getElementById('animals');
+
+        settingsBtn.addEventListener('click', () => {
+            settingsPane.classList.toggle('open');
+        });
+
+        closePane.addEventListener('click', () => {
+            settingsPane.classList.remove('open');
+        });
+
+        for (let i = 0; i < 4; i++) {
+            let item = document.createElement('div');
+            animals.appendChild(item);
+            item.innerText = 'Item ' + i;
+        }
+        
+    </script>
+
+</body>
+
+</html>
